@@ -9,3 +9,4 @@ window.onscroll = () => {
   }
   prevScrollpos = currentScrollPos;
 }
+new WOW().init();
