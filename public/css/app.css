@@ -1,0 +1,11 @@
+body {
+    margin-top: 68px;
+}
+
+#navbar {
+    transition: all 0.3s ease-out;
+}
+
+.e {
+    color: #2AED51;
+}
