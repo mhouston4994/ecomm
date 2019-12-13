@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.render("index", {items: items});
 })
 
-app.get('/products/:id', (req,res) => {
+app.get('/product/:id', (req,res) => {
     res.send("Item number: " + req.params.id);
 })
 

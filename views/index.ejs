@@ -1,67 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="eCommerce site dedicated too all products.">
-  <meta name="author" content="Matthew Houston">
-
-  <title>eComm</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Animation lib -->
-  <link rel="stylesheet" href="lib/animate/animate.min.css">
-
-  <!-- Google Fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text:400,700|Lobster&display=swap" rel="stylesheet">
-  
-  <!-- Custom styles -->
-  <link href="css/index.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-  <!-- Navigation -->
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#"><span class="e">e</span>Comm</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <%- include('partials/header'); %>
 
   <!-- Page Content -->
+  <div class="jumbotron pb-2">
+      <div class="container">
+      <h1 class="display-4 my-4"><span class="e">e</span>Comm</h1>
+      <h2 class="lead">Where shopping meets the 21st century</h2>
+      <hr class="my-3">
+    </div>
+  </div>
   <div class="container">
-
     <div class="row">
 
       <div class="col-lg-3">
-
-        <h1 class="my-4"><span class="e">e</span>Comm</h1>
         <div class="list-group">
           <a href="#" class="list-group-item active">Category 1</a>
           <a href="#" class="list-group-item">Category 2</a>
@@ -108,10 +58,10 @@
               <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Item One</a>
+                  <a href="/product/<%= item.id %>"</a><%= item.name %></a>
                 </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                <h5>$<%= item.price %></h5>
+                <p class="card-text"><%= item.description %></p>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -132,24 +82,4 @@
   </div>
   <!-- /.container -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; eComm, A fictional Website 2019</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- WoW Library -->
-  <script src="lib/wow/wow.min.js"></script>
-
-  <!-- Custom Javascript-->
-  <script src="js/index.js"></script>
-
-</body>
-
-</html>
+<%- include('partials/footer'); %>

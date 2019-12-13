@@ -1,20 +1,47 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Big Shoulders Text', cursive;
+    font-family: 'Philosopher', sans-serif;
 }
 body {
     margin-top: 68px;
 }
 
-h1 {
-    font-family: 'Lobster', cursive;
+.navbar-toggler {
+    border: none !important;
+}
+.navbar-toggler:focus {
+    outline: none;
 }
 
+.jumbotron {
+    background-color: white;
+    margin-top: 0;
+}
+ 
 #navbar {
+    top: 0;
+    background-color: white;
+    margin-bottom: 0;
     transition: all 0.3s ease-out;
+    font-size: 1.5em;
 }
 
+.navbar-brand {
+    font-size: 1.5em;
+}
+
+.navlist {
+    color: black !important;
+}
+
+.open-nav {
+    font-size: .9em !important;
+    border-bottom: solid 1px #b6b6b6a4;
+}
+footer {
+    background-color: #007bff;
+}
 .e {
     color: #2AED51;
 }
